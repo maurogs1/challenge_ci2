@@ -2,7 +2,8 @@
 
 class Person extends CI_Model{
     public $dni;
-    public $fullname;
+    public $name;
+    public $lastname;
     public $email;
     function __construct()
     {
@@ -10,11 +11,12 @@ class Person extends CI_Model{
     }
 
 
-    public function add($txtdni, $txtfullname,$txtemail){
+    public function add($txtdni, $txtname,$txtlastname,$txtemail){
         $this->dni = $txtdni;
-        $this->fullname = $txtfullname;
+        $this->name = $txtname;
+        $this->lastname = $txtlastname;
         $this->email = $txtemail;
-        $this->db->insert('personas', $this);
+        $this->db->insert('persons', $this);
         return $this->db->insert_id();
     }
 

@@ -1,0 +1,53 @@
+.center{
+    
+    height: 100vh;
+    position: relative;
+    background: gray;
+}
+
+
+.center .child{
+    background: white;
+    width: 50vh;
+    height: 300px;
+    border: 5px solid white  ;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.login-form{
+    margin: 5px;
+}
+.center .register{
+    background: white;
+    width: 50vh;
+    height: 450px;
+    border: 5px solid white  ;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+
+::-webkit-input-placeholder {
+    text-align: center;
+ }
+ :-moz-placeholder { /* Firefox 18- */
+    text-align: center;  
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;  
+ }
+ 
+ :-ms-input-placeholder {  
+    text-align: center; 
+ }

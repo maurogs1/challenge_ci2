@@ -5,9 +5,11 @@ class Loginc extends CI_Controller{
     {
         parent::__construct();
         $this->load->model('login');
+        $this->load->helper('url');
+
     }
     public function index(){
-        $result['result'] = "a";
+        $result['error'] = "";
         $this->load->view('layouts/header');
         $this->load->view('login/loginv',$result);
         $this->load->view('layouts/footer');
@@ -17,11 +19,15 @@ class Loginc extends CI_Controller{
         $username = $this->input->post('username');
         $password = $this->input->post('password');
         $result = $this->login->login($username, $password);
-        if($result)
+        if(!$result){
+            $result['error'] ="Usuario o contraseña incorrecto";
+            $this->load->view('layouts/header');
+            $this->load->view('login/loginv',$result);
+            $this->load->view('layouts/footer');
+        }else
+        echo "bien";
         
-        $this->load->view('layouts/header');
-        $this->load->view('login/loginv',$result);
-        $this->load->view('layouts/footer');
+        
 
     }
    
