@@ -7,7 +7,7 @@
 
 .center .child{
     background: white;
-    width: 400px;
+    width: 50vh;
     height: 250px;
     border: 5px solid white  ;
     border-radius: 10px;
@@ -17,4 +17,7 @@
     bottom: 0;
     top: 0;
     margin: auto;
+}
+.login-form{
+    margin: 5px;
 }
