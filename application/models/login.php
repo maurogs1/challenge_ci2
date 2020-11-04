@@ -17,11 +17,12 @@ class Login extends CI_Model{
          if($result->num_rows == 1){
              $r = $result->row();
             $user_session = array(
-                's_id' => $r->id,
-                's_name' => $r->name,
-                's_lastname' => $r->lastname
+                'id' => $r->id,
+                'name' => $r->name,
+                'lastname' => $r->lastname,
+                'logged_in' => TRUE
             );
-            $this->session->userdata($user_session);
+            $this->session->set_userdata($user_session);
             return true;
          }else{
             false;
