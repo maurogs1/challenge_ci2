@@ -6,6 +6,7 @@ class Registerc extends CI_Controller{
             parent::__construct();
             $this->load->model('person');
             $this->load->model('user');
+            $this->load->model('budget');
             $this->load->library('encrypt');
             $this->load->helper(array('form', 'url'));
 
@@ -18,18 +19,17 @@ class Registerc extends CI_Controller{
         }
 
         public function register(){
+
             $name = $this->input->post('nombre');
             $lastname =$this->input->post('apellido');
             $dni = $this->input->post('dni');
             $email=$this->input->post('email');
-            $username = $this->input->post('username');
-            
-            $password =$this->encrypt->sha1($this->input->post('password'));
-            //if($this->elementsNull($name,$lastname,$dni,$email,$username,$password)){            
+            $username = $this->input->post('username');            
+            $password =$this->encrypt->sha1($this->input->post('password'));            
             $personId = $this->person->add($dni,$name,$lastname,$email);            
             $this->user->add($username,$password,$personId);
             $this->loadLogin();                
-            //}
+            
             
         }
 

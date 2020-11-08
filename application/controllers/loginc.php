@@ -7,34 +7,33 @@ class Loginc extends CI_Controller{
         $this->load->model('login');
         $this->load->helper('url');
         $this->load->library('encrypt');
+        $this->load->library('../controllers/homec');
 
 
     }
     public function index(){
-        $result['error'] = "";
-        $this->load->view('layouts/header');
-        $this->load->view('login/loginv',$result);
-        $this->load->view('layouts/footer');
+        $this->loadLogin();
     }
 
     public function login(){
         $username = $this->input->post('username');
         $password =$this->encrypt->sha1($this->input->post('password'));
         $result = $this->login->login($username, $password);
-        if(!$result){
-            $result['error'] ="Usuario o contraseña incorrecto";
-            $this->load->view('layouts/header');
-            $this->load->view('login/loginv',$result);
-            $this->load->view('layouts/footer');
-            
-        }else
-        echo "Nombre ".$this->session->userdata('name');
-        echo  " Apellido: ".$this->session->userdata('lastname');
-        echo   " Id: " .$this->session->userdata('id');
-      //  echo $this->session->userdata('logged_in');
-        
-        
+        if(!$result)
+            $this->loadLogin("Usuario o contraseña incorrecto");
+        else
+            $this->homec->index();
+    }
+    public function logout(){
+        $this->session->sess_destroy();
+        $this->loadLogin();
+    }
 
+    private function loadLogin($error=''){
+        $result['error'] =$error;
+        $this->load->view('layouts/header');
+        $this->load->view('login/loginv',$result);
+        $this->load->view('layouts/footer');    
     }
    
 }

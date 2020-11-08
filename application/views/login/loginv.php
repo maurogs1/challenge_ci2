@@ -4,12 +4,12 @@
     <form class="login ml-5 mr-5""  action="<? echo base_url()?>loginc/login" method="POST">
     <div class="row">
         <div class="form-group col-12">            
-            <input id="my-input" class="form-control"  placeholder="Usuario" type="text" name="username">
+            <input class="form-control"  placeholder="Usuario" type="text" name="username">
         </div>
     </div>
     <div class="row">
         <div class="form-group col-12">            
-            <input id="my-input" class="form-control" placeholder="Contraseña" type="password" name="password">
+            <input class="form-control" placeholder="Contraseña" type="password" name="password">
         </div>
     </div>    
         <hr>
