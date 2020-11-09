@@ -25,4 +25,25 @@ class Operationc extends CI_Controller{
         $data['personId'] = $this->session->userdata('id');      
         $this->operation->add($data);
     }
+
+    public function getAll(){
+        
+        echo  json_encode($this->operation->getAll());
+
+    }
+    public function update(){
+        $data['id'] = $this->input->post('mid');
+        $data['amount'] = $this->input->post('mamount');
+        $data['date'] = $this->input->post('mdate');
+        $data['concept'] = $this->input->post('mconcept');        
+        $data['categoryId'] = $this->input->post('mcategory');
+        $data['type'] = $this->input->post('mtype'); 
+        $data['personId'] = $this->session->userdata('id');      
+        $this->operation->update($data);
+    }
+
+    public function delete(){
+        $this->operation->delete($this->input->id);
+    }
+    
 }

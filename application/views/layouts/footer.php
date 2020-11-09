@@ -14,6 +14,8 @@
 
 <?php  if($this->uri->segment(1)=='operationc'){ ?>
     <script src="<?php echo base_url()?>assets/js/category.js"></script>    
+    <script src="<?php echo base_url()?>assets/js/operation.js"></script>    
+
 <?php }?>
 
 </body>
