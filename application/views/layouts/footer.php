@@ -12,7 +12,7 @@
 
 
 
-<?php  if($this->uri->segment(1)=='operationc'){ ?>
+<?php  if($this->uri->segment(1)=='operationc' || $this->uri->segment(1)=='homec' || $this->uri->segment(1)=='loginc'){ ?>
     <script src="<?php echo base_url()?>assets/js/category.js"></script>    
     <script src="<?php echo base_url()?>assets/js/operation.js"></script>    
 

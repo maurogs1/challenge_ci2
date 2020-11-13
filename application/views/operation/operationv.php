@@ -35,14 +35,14 @@
   <div class="modal-dialog modal-md" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="operationModalTittle">Modal title</h5>
+        <h5 class="modal-title" id="operationModalTittle">Agregar una operación</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         
-<form  class="ml-5 mr-5" action="<?php base_url()?>operationc/add" method="POST">
+<form  class="ml-5 mr-5" action="<?php echo base_url();?>operationc/add" method="POST">
 <div class="row">
     <div class="form-group col-6">
         <input id="amount" placeholder="Cantidad"  class="form-control" type="number" name="amount">
@@ -70,8 +70,9 @@
 </div>
 </div>
 <div class="modal-footer">
+
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button class="btn btn-success" type="submit" >Aceptar</button>
+        <button id="btnModalAcecept" class="btn btn-success" type="submit" >Aceptar</button>
       </div>
     </form>
     </div>
@@ -85,17 +86,15 @@
   <div class="modal-dialog modal-md" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="operationUpdateTittle">Modal title</h5>
+        <h5 class="modal-title" id="operationUpdateTittle">Actualizar</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         
-<form  class="ml-5 mr-5" action="<?php base_url()?>operationc/update" method="POST">
+<form  class="ml-5 mr-5" action="<?php echo base_url()?>operationc/update" method="POST">
 <div class="row">
-<input id="mdate" name="mdate" hidden>
-<input id="mtype" name="mtype" hidden>
 <input id="mid" name="mid" hidden>
     <div class="form-group col-6">
       <label for="mamount">Cantidad</label>
@@ -120,7 +119,7 @@
 </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button class="btn btn-success" type="submit" >Actualizar</button>
+        <button id="btnModalUpdate" class="btn btn-success" type="submit" >Actualizar</button>
       </div>
     </form>
     </div>

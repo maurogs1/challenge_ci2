@@ -7,7 +7,6 @@ class Loginc extends CI_Controller{
         $this->load->model('login');
         $this->load->helper('url');
         $this->load->library('encrypt');
-        $this->load->library('../controllers/homec');
 
 
     }
@@ -22,7 +21,8 @@ class Loginc extends CI_Controller{
         if(!$result)
             $this->loadLogin("Usuario o contraseña incorrecto");
         else
-            $this->homec->index();
+        redirect('homec', 'refresh');
+
     }
     public function logout(){
         $this->session->sess_destroy();
@@ -35,5 +35,11 @@ class Loginc extends CI_Controller{
         $this->load->view('login/loginv',$result);
         $this->load->view('layouts/footer');    
     }
+
+    public function isLogged(){
+        if(!($this->session->userdata('logged_in')))
+            redirect('loginc');
+    }
+    
    
 }

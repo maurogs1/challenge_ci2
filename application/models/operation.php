@@ -17,8 +17,19 @@ class Operation extends CI_Model{
     public function getAll(){
         $this->db->select('o.id,o.amount, o.date, o.concept, o.type, p.name, p.lastname, c.name category');
         $this->db->from('operations o');
+        $this->db->where('o.personId', $this->session->userdata('id'));
         $this->db->join('persons p','p.id = o.personId');
         $this->db->join('categories c','c.id = o.categoryId');    
+        return $this->db->get()->result();
+    }
+
+    public function getLastTen(){
+        $this->db->select('o.id,o.amount, o.date, o.concept, o.type, p.name, p.lastname, c.name category');
+        $this->db->from('operations o');
+        $this->db->where('o.personId', $this->session->userdata('id'));
+        $this->db->join('persons p','p.id = o.personId');
+        $this->db->join('categories c','c.id = o.categoryId');    
+        $this->db->limit('10');
         return $this->db->get()->result();
     }
 
@@ -35,7 +46,33 @@ class Operation extends CI_Model{
     public function delete($id){
         $this->db->where('id', $id);
         $this->db->delete('operations');
-        }
+    }
 
-    
+    public function getAmountByType($type){
+        $this->db->select('o.amount');
+        $this->db->from('operations o');
+        $this->db->where('o.type', $type);
+        $this->db->where('o.personId', $this->session->userdata('id'));
+        $query = $this->db->get();
+
+        $total = 0;
+        foreach ($query->result_array() as $row)
+        {
+                $total+= $row['amount'];
+                
+        }
+        return $total;
+    }
+
+    public function getAllByCategory($categoryId){
+        $this->db->select('o.id,o.amount, o.date, o.concept, o.type, p.name, p.lastname, c.name category');
+        $this->db->from('operations o');
+        $this->db->where('o.personId', $this->session->userdata('id'));
+        $this->db->where('o.categoryId', $categoryId);
+        $this->db->join('persons p','p.id = o.personId');
+        $this->db->join('categories c','c.id = o.categoryId');    
+        $this->db->limit('10');
+        return $this->db->get()->result();
+    }
+
 }
