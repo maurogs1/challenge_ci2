@@ -21,13 +21,13 @@ La pantalla de inicio deberá mostrar el balance actual, es decir, el resultante
 ABM de operaciones (ingresos y egresos) 
 La aplicación deberá contener: 
  
-●	Formulario de registro de operación. El mismo deberá contener: 
-○ Concepto 
-○ Monto 
-○ Fecha 
-○ Tipo (ingreso o egreso) 
-●	Listado de operaciones registradas según su tipo (ingreso o egreso). 
-●	Desde el listado, se debe poder modificar o eliminar una operación registrada previamente. No debe ser posible modificar el tipo de operación (ingreso o egreso) una vez creada. 
+	Formulario de registro de operación. El mismo deberá contener: 
+● Concepto  <br>
+● Monto <br>
+● Fecha <br>
+● Tipo (ingreso o egreso) <br>
+●	Listado de operaciones registradas según su tipo (ingreso o egreso). <br>
+●	Desde el listado, se debe poder modificar o eliminar una operación registrada previamente. No debe ser posible modificar el tipo de operación (ingreso o egreso) una vez creada. <br>
  
 Bonus 
  
@@ -41,7 +41,7 @@ Agregar la funcionalidad de categorizar las operaciones registradas en el gestor
  
 Criterios a Evaluar 
  
-●	El diseño debe ser responsive, pudiendo utilizarse CSS puro o algún framework de Frontend 
-●	Código limpio, buenas prácticas de programación, en idioma inglés 
-●	Correcto diseño de la base de datos 
-●	Buenas prácticas para el nombre de rutas 
+●	El diseño debe ser responsive, pudiendo utilizarse CSS puro o algún framework de Frontend <br>
+●	Código limpio, buenas prácticas de programación, en idioma inglés <br>
+●	Correcto diseño de la base de datos <br>
+●	Buenas prácticas para el nombre de rutas<br> 
