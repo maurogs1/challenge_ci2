@@ -48,14 +48,14 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-// $db['default']['hostname'] = 'localhost';
-// $db['default']['username'] = 'root';
-// $db['default']['password'] = '';
-// $db['default']['database'] = 'challenge_ci2';
-$db['default']['hostname'] = 'durvbryvdw2sjcm5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
-$db['default']['username'] = 'ybflfc3r9t8fkm6q';
-$db['default']['password'] = 'fr5pmehm4a1wz8h0';
-$db['default']['database'] = 'mhgef63rn2cwxdml';
+ $db['default']['hostname'] = 'localhost';
+ $db['default']['username'] = 'root';
+ $db['default']['password'] = '';
+ $db['default']['database'] = 'challenge_ci2';
+// $db['default']['hostname'] = 'durvbryvdw2sjcm5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
+// $db['default']['username'] = 'ybflfc3r9t8fkm6q';
+// $db['default']['password'] = 'fr5pmehm4a1wz8h0';
+// $db['default']['database'] = 'mhgef63rn2cwxdml';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
