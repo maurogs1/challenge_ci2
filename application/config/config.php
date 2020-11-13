@@ -22,7 +22,9 @@
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/challenge-ci2/';
+$config['base_url'] = ' https://challenge-ci2.herokuapp.com/';
+//$config['base_url'] = 'http://localhost/challenge-ci2/';
+
 
 /*
 |--------------------------------------------------------------------------
