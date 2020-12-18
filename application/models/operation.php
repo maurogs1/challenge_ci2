@@ -75,4 +75,11 @@ class Operation extends CI_Model{
         return $this->db->get()->result();
     }
 
+    // public function getByMonth($mounth){
+    //     $this->db->select('sum(o.amount)');
+    //     $this->db->from('operations o');
+    //     $this->db->where('date',$mounth);
+        
+    // }
+
 }

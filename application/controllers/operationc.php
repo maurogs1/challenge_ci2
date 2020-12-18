@@ -30,6 +30,7 @@ class Operationc extends CI_Controller{
         }
     }
 
+
     private function loadOperation($data = null, $isError = false){
         $data['name'] = $this->session->userdata('name');
         $data['lastname'] =$this->session->userdata('lastname');
@@ -62,7 +63,6 @@ class Operationc extends CI_Controller{
             $this->operation->update($data);
             redirect('operationc', 'refresh');
         }
-        
     }
 
     public function delete(){

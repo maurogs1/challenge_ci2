@@ -2,7 +2,7 @@
 /**
  * load the first interaction with the table in the crud of operations
  */
-$.post(baseurl+"operationc/getAll",function(data){
+$.get(baseurl+"operationc/getAll",function(data){
         var operations = JSON.parse(data);
         $.each(operations, function(i,item){
             i+=1;
@@ -29,7 +29,7 @@ $.post(baseurl+"operationc/getAll",function(data){
  * get the las 10 operation from the user logged
  */
 function getLastTen(){
-    $.post(baseurl+"homec/getLastTen",function(data){
+    $.get(baseurl+"homec/getLastTen",function(data){
         var operations = JSON.parse(data);
         $.each(operations, function(i,item){
             $('#tblLastOperations').append(                
@@ -64,7 +64,7 @@ $('#cbxCategoryHome').change(function(){
 
 function getByCategory(selected){
     console.log(selected);
-    $.post(baseurl+"homec/getByCategory",{
+    $.get(baseurl+"homec/getByCategory",{
         category: selected
     }, function(data){
         var operations = JSON.parse(data);
@@ -90,7 +90,7 @@ function getByCategory(selected){
             '<td>'+item.amount+'</td>'+
             '<td>'+
             '</tr>'                
-            )
+            );
      });
 
     });
@@ -115,7 +115,7 @@ selectOperation = function(id,category,type,concept,date,amount){
  * delete an operation
  */
 deleteOperation = function(operationId){
- $.post(baseurl+"operationc/delete",
+ $.get(baseurl+"operationc/delete",
  {id: operationId},
      function(data){
         location.reload();

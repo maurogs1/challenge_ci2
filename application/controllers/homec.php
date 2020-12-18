@@ -1,6 +1,6 @@
 <?php 
 class Homec extends CI_Controller{
-     const ENTRY = "entry";
+    const ENTRY = "entry";
     const EGRESS = "egress";
     
     public function index(){
@@ -40,6 +40,11 @@ class Homec extends CI_Controller{
     public function getLastTen(){
         $this->load->model('operation');
         echo json_encode($this->operation->getLastTen());
+    }
+
+    public function getByMonth(){
+        $monthNumber = $this->input->post('total');
+        
     }
 
     public function getByCategory(){

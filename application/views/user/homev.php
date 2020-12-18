@@ -1,3 +1,6 @@
+
+<canvas id="myChart" ></canvas>
+
 <!-- La pantalla de inicio deberá mostrar el balance actual, es decir, el resultante de los ingresos y
 egresos de dinero cargados, y un listado de los últimos 10 registrados. -->
 <div class="container">
@@ -44,3 +47,6 @@ egresos de dinero cargados, y un listado de los últimos 10 registrados. -->
 </div>
 
 </div>
+
+
+

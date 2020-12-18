@@ -1,7 +1,7 @@
 <div class="center">
     <div class="child">
 
-    <form class="login ml-5 mr-5""  action="<? echo base_url()?>loginc/login" method="POST">
+    <form class="login ml-5 mr-5" action="<?php echo base_url()?>loginc/login" method="POST">
     <div class="row">
         <div class="form-group col-12">            
             <input class="form-control"  placeholder="Usuario" type="text" name="username">

@@ -2,7 +2,7 @@
 <div class="register">
 <h1 class="text-center mb-3"> Registrar usuario</h1>
 <p><?php $error ?></p>
-<form  class="ml-5 mr-5" action="<?php base_url()?>registerc/register" method="POST">
+<form  class="ml-5 mr-5" action="<?php echo base_url()?>registerc/register" method="POST">
 <div class="row">
     <div class="form-group col-12">
         <input id="nombre" placeholder="Nombre" class="form-control" type="text" name="nombre">
